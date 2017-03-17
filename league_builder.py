@@ -6,7 +6,7 @@ import csv
 #import csv file
 with open('soccer_players.csv', newline='') as csvfile:
     testreader = csv.DictReader(csvfile, delimiter='|')
-    rows = list(testreader)
+    rows = tuple(testreader)
 #import information into formatable code
 #divide teams equally into three "sharks" "raptors" and "dragons"
 #divide experienced players into three teams equally.  There are 9
