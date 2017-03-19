@@ -17,10 +17,11 @@ dragons = []
 def sep():
     for row in rows:
         for r in row.values():
-            if 'YES' in str(r):
+            kn,ht,ex,gn = str(r).split(',')
+            if 'YES' in ex:
                 exp.append(''.join(i for i in str(r).replace(',','',1).replace(',', ', ') if i.isalpha() or i == ',' or i == ' '))
     
-            if 'NO' in str(r):
+            if 'NO' in ex:
                 no_exp.append(''.join(i for i in str(r).replace(',','',1).replace(',', ', ') if i.isalpha() or i == ',' or i == ' '))
                 
     return exp, no_exp
@@ -112,4 +113,5 @@ def main():
 if __name__=='__main__':
     main()
 
-
+        
+        
